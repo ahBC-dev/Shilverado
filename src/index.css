@@ -1,0 +1,210 @@
+/* src/index.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+* html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.gradient-bg-welcome {
+  background-color: #100f15; /* solid dark base */
+
+}
+
+.gradient-bg-welcome-two {
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(255, 0, 128, 0.05) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(0, 255, 255, 0.05) 0%, transparent 20%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 0.03) 0%, transparent 30%),
+    linear-gradient(135deg, #0f0f0f 0%, #18171b 50%, #0f0f0f 100%);
+}
+
+
+.gradient-bg-services {
+  background-color: #0f0e13;
+  background-image: 
+    radial-gradient(circle at 50% 20%, hsla(253,16%,7%,1) 0, transparent 40%), 
+    radial-gradient(circle at 50% 60%, hsla(225,39%,25%,1) 0, transparent 40%);
+}
+
+.gradient-bg-transactions {
+  background-color: #0f0e13;
+  background-image: 
+    radial-gradient(at 0% 100%, hsla(253,16%,7%,1) 0, transparent 50%), 
+    radial-gradient(at 50% 0%, hsla(225,39%,25%,1) 0, transparent 50%);
+}
+
+.gradient-bg-footer {
+  background-color: #0f0e13;
+  background-image: 
+    radial-gradient(at 0% 100%, hsla(253,16%,7%,1) 0, transparent 53%), 
+    radial-gradient(at 50% 150%, hsla(339,49%,30%,1) 0, transparent 50%);
+}
+
+.blue-glassmorphism {
+  background: rgb(39, 51, 89, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* white glassmorphism */
+.white-glassmorphism {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.eth-card {
+  background-color:#a099ff;
+  background-image: 
+    radial-gradient(at 83% 67%, rgb(152, 231, 156) 0, transparent 58%), 
+    radial-gradient(at 67% 20%, hsla(357,94%,71%,1) 0, transparent 59%), 
+    radial-gradient(at 88% 35%, hsla(222,81%,65%,1) 0, transparent 50%), 
+    radial-gradient(at 31% 91%, hsla(9,61%,61%,1) 0, transparent 52%), 
+    radial-gradient(at 27% 71%, hsla(336,91%,65%,1) 0, transparent 49%), 
+    radial-gradient(at 74% 89%, hsla(30,98%,65%,1) 0, transparent 51%), 
+    radial-gradient(at 53% 75%, hsla(174,94%,68%,1) 0, transparent 45%);
+}
+
+/*text gradients 1 & 2*/
+.text-gradient {
+  background: linear-gradient(135deg, 
+    #FBBF24 0%,    /* yellow-400 */
+    #F59E0B 20%,   /* yellow-500 */
+    #EF4444 40%,   /* red-500 */
+    #DC2626 60%,   /* red-600 */
+    #EC4899 80%,   /* pink-500 */
+    #DB2777 100%   /* pink-600 */
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: shimmer 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 6px rgba(236, 72, 153, 0.15));
+}
+@keyframes shimmer {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.text-gradientTwo {
+  background: linear-gradient(135deg, 
+    #60A5FA 0%,    /* blue-400 */
+    #3B82F6 25%,   /* blue-500 */
+    #2563EB 50%,   /* blue-600 */
+    #6366F1 75%,   /* indigo-500 */
+    #8B5CF6 100%   /* violet-500 */
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: shimmer 6s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) translateZ(20px) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-12px) translateZ(30px) scale(1.2);
+    opacity: 0.9;
+  }
+}
+
+/*glowing border*/
+.glowy-border {
+  position: relative;
+  background: #1a202c; /* Your card bg color */
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.glowy-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    #60A5FA, #3B82F6, #2563EB, #6366F1, #8B5CF6, #60A5FA
+  );
+  background-size: 400% 400%;
+  border-radius: 14px;
+  z-index: -1;
+  animation: borderFlow 4s ease infinite;
+}
+
+.glowy-border::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    #60A5FA, #3B82F6, #2563EB, #6366F1, #8B5CF6, #60A5FA
+  );
+  background-size: 400% 400%;
+  border-radius: 14px;
+  z-index: -2;
+  filter: blur(10px);
+  opacity: 0.7;
+  animation: borderFlow 4s ease infinite;
+}
+
+@keyframes borderFlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+
+/* Smooth transitions */
+* {
+  transition-property: transform, box-shadow, opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Tailwind CSS Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* End of src/index.css */
